@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gfu-hq-Pm2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choose-->
+        <scene sceneID="7ln-NX-QOb">
+            <objects>
+                <tableViewController id="yf1-UG-PgM" customClass="TableViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nJW-Ex-5hn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="200" id="7fo-Lb-XCo" customClass="PickerTableViewCell" customModule="DatePicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7fo-Lb-XCo" id="T9K-sh-Scd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rbb-UH-Kce">
+                                            <rect key="frame" x="0.0" y="30" width="375" height="170"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="516881460.80422002">
+                                                <!--2017-05-19 10:11:00 +0000-->
+                                            </date>
+                                        </datePicker>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg6-kW-u7A">
+                                            <rect key="frame" x="8" y="0.0" width="359" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="slw-mE-S6I"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="xg6-kW-u7A" secondAttribute="trailing" constant="8" id="8pO-Xt-F8q"/>
+                                        <constraint firstItem="Rbb-UH-Kce" firstAttribute="top" secondItem="xg6-kW-u7A" secondAttribute="bottom" constant="5" id="8u2-cb-58I"/>
+                                        <constraint firstItem="xg6-kW-u7A" firstAttribute="top" secondItem="T9K-sh-Scd" secondAttribute="top" id="N3Y-bk-uDy"/>
+                                        <constraint firstItem="xg6-kW-u7A" firstAttribute="leading" secondItem="T9K-sh-Scd" secondAttribute="leading" constant="8" id="ZcU-b3-niI"/>
+                                        <constraint firstItem="Rbb-UH-Kce" firstAttribute="leading" secondItem="T9K-sh-Scd" secondAttribute="leading" id="bR7-dc-WI5"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rbb-UH-Kce" secondAttribute="trailing" id="nLU-kK-qQS"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rbb-UH-Kce" secondAttribute="bottom" id="z1p-i3-QML"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="datePicker" destination="Rbb-UH-Kce" id="Cj7-ST-gM4"/>
+                                    <outlet property="titleLabel" destination="xg6-kW-u7A" id="0IO-hD-lpI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yf1-UG-PgM" id="wIs-5U-I8d"/>
+                            <outlet property="delegate" destination="yf1-UG-PgM" id="WWO-gL-P7Y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose" id="Ivi-dv-g6g">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dbY-Tm-gnI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Qwb-ih-NBs"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pk5-5j-4RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2794.4000000000001" y="-540.17991004497753"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bnD-aX-nUt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gfu-hq-Pm2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sr1-JV-fSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yf1-UG-PgM" kind="relationship" relationship="rootViewController" id="Ug3-HV-t8a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7IT-yI-5IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.2" y="-540.17991004497753"/>
+        </scene>
+    </scenes>
+</document>
